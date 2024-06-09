@@ -1,0 +1,16 @@
+div.hero-image-container {
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hero-content {
+  color: rgb(239, 194, 179);
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+}

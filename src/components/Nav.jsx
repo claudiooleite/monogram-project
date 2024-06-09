@@ -1,7 +1,7 @@
-import { Outlet, Link } from "react-router-dom";
-import '../assets/styles/layout.css'
+import { Link } from "react-router-dom";
+import '../assets/styles/nav.css'
 
-const Layout = () => {
+const Nav = () => {
   return (
     <>
       <div className="nav-position-fixed">
@@ -21,11 +21,8 @@ const Layout = () => {
           </ul>
         </nav>
       </div>
-
-      <Outlet />
-
     </>
   )
 };
 
-export default Layout;
+export default Nav;

@@ -1,9 +1,9 @@
-function Home(){
+import Hero from "../components/Hero"
+
+function Home() {
     return (
         <>
-        <h1>
-        My first heading
-        </h1>
+            <Hero />
         </>
     )
 };
