@@ -1,0 +1,52 @@
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1145px;
+  place-items: center;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.card {
+  margin: auto;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pre-order-badge {
+  background: #ff8d6b;
+  text-transform: uppercase;
+  color: #1a2456;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  padding: 5px 10px;
+}
+
+.card-header-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  height: 2rem;
+}
+
+.card-header-price h3 {
+  margin-block-start: 0em;
+  margin-block-end: 0.2em;
+}
+
+.card-content-description{
+    font-weight: 300;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+}
