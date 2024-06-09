@@ -1,0 +1,38 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1145px;
+  place-items: center;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  align-items: start;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  color: rgb(239, 194, 179);
+}
+
+footer li {
+  list-style-type: none;
+  color: rgb(239, 194, 179);
+  font-size: 0.8rem;
+  padding: 4px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(239, 194, 179);
+}
+
+address {
+    color: rgb(239, 194, 179);
+}
+
+.footer-bg{
+    background-color: #1a2456;
+}
