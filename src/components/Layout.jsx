@@ -1,23 +1,29 @@
 import { Outlet, Link } from "react-router-dom";
+import '../assets/styles/layout.css'
 
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="nav-position-fixed">
+        <nav className="nav-parent">
+
+          <Link className="nav-logo" to="/">Home</Link>
+
+          <ul className="nav-links">
+            <Link to="/howitworks">How It works</Link>
+            <Link to="/workflow">Workflows</Link>
+            <Link to="/download">Download</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/support">Support</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/bsk">Basket Icon</Link>
+            <Link to="/cleng">Leng</Link>
+          </ul>
+        </nav>
+      </div>
 
       <Outlet />
+
     </>
   )
 };

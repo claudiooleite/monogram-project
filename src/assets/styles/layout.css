@@ -1,0 +1,51 @@
+.nav-position-fixed {
+  top: 0px;
+  z-index: 100;
+  outline: none;
+  padding: 1rem;
+}
+
+.nav-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  top: 0;
+  padding: 0.5em;
+  position: relative;
+  background-color: #1a2456;
+}
+
+.nav-logo {
+  display: block;
+  text-decoration: none;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 20%;
+  align-self: auto;
+  color: #ff8b68;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links > * {
+  text-decoration: none;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  order: 0;
+  color: #ff8b68;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+ul.nav-links {
+    margin: 0;
+    padding: 0;
+}
