@@ -1,7 +1,7 @@
 .section-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr)0.6fr;
   gap: 10px;
   max-width: 1145px;
   place-items: center;
@@ -9,15 +9,23 @@
   padding-top: 45px;
   padding-bottom: 45px;
 }
+div.card.Synthesizer {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
 
 .card {
   margin: auto;
   position: relative;
 }
+
+.card img:hover {
+  transform: scale(1.01);
+}
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .pre-order-badge {
@@ -45,8 +53,12 @@
   margin-block-end: 0.2em;
 }
 
-.card-content-description{
-    font-weight: 300;
-    margin-block-end: 0em;
-    margin-block-start: 0em;
+.card-content-description {
+  font-weight: 300;
+  margin-block-end: 0em;
+  margin-block-start: 0em;
+}
+
+article .img-bg {
+  background: #d2d2d0;
 }

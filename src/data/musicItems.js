@@ -1,7 +1,8 @@
-import image1 from "../assets/images/acoustic-guitar-1.jpg";
-import image2 from "../assets/images/acoustic-guitar-2.jpg";
-import image3 from "../assets/images/electricguitar1.jpg"
-import image4 from "../assets/images/electricguitar2.jpg"
+import image1 from "../assets/images/acoustic-guitar-2-removebg-preview.png";
+import image2 from "../assets/images/acoustic-guitar-1.jpg";
+import image3 from "../assets/images/electric-guitar-1669233_1280.png";
+import image4 from "../assets/images/electricguitar1.jpg";
+import imageSynth1 from "../assets/images/vintage-synthesizer-1601935_1920-removebg-preview.png";
 
 export const musicItems = [
   {
@@ -33,6 +34,13 @@ export const musicItems = [
     images: [image1, image2],
     alt: "Drum Set",
     description: "Complete set for aspiring drummers.",
+  },
+  {
+    name: "Synthesizer",
+    price: 399.99,
+    images: [imageSynth1, image2],
+    alt: "Synthesizer",
+    description: "Electronic sounds for modern music.",
   },
   {
     name: "Keyboard",
@@ -118,13 +126,7 @@ export const musicItems = [
     alt: "Cajón",
     description: "Percussion instrument for acoustic sets.",
   },
-  {
-    name: "Synthesizer",
-    price: 399.99,
-    images: [image1, image2],
-    alt: "Synthesizer",
-    description: "Electronic sounds for modern music.",
-  },
+
   {
     name: "Microphone",
     price: 89.99,
