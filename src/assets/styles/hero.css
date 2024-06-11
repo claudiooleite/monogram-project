@@ -1,9 +1,11 @@
 div.hero-image-container {
   background-size: cover;
-  background-position: center;
   height: 75vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 

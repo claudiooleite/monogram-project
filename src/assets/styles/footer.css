@@ -24,6 +24,10 @@ footer li {
   padding: 4px;
 }
 
+footer ul {
+    padding-inline-start: 0px;
+}
+
 footer a{
     text-decoration: none;
     color: rgb(239, 194, 179);
