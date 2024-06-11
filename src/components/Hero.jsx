@@ -1,8 +1,10 @@
+
 import image from "../assets/images/headphones-3085681_1280.jpg"
 import "../assets/styles/hero.css"
 
 
 function Hero() {
+    
     return (
         <div className="hero-image-container" style={{
             backgroundImage: `url(${image})`

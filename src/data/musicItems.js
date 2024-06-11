@@ -1,5 +1,7 @@
 import image1 from "../assets/images/acoustic-guitar-1.jpg";
 import image2 from "../assets/images/acoustic-guitar-2.jpg";
+import image3 from "../assets/images/electricguitar1.jpg"
+import image4 from "../assets/images/electricguitar2.jpg"
 
 export const musicItems = [
   {
@@ -14,7 +16,7 @@ export const musicItems = [
   {
     name: "Electric Guitar",
     price: 299.99,
-    images: [image1, image2],
+    images: [image3, image4],
     alt: "Electric Guitar",
     description: "Experience the best in electric sound.",
   },
