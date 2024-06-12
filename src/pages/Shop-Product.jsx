@@ -9,7 +9,7 @@ function ShopProduct() {
     const { productId } = useParams();
     const product = musicItems[productId];
     return (
-        <>
+        <div className="parent-container">
             <Nav />
             <div className="cssportal-grid">
                 <div className="div1">
@@ -28,7 +28,7 @@ function ShopProduct() {
                 <div className="div7">div7</div>
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 

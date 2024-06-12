@@ -1,3 +1,4 @@
+import AccordionInfo from "./AccordionInfo";
 import "./shop-product.css";
 
 
@@ -21,6 +22,7 @@ function ProductCard({ product }) {
         <h1>Rating: {product.rating} stars</h1>
       </div>
       <h2>{getAvailabilityMessage()}</h2>
+      <AccordionInfo></AccordionInfo>
     </>
   );
 }
