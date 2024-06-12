@@ -1,8 +1,8 @@
-import "../assets/styles/shop-product.css";
+import "./shop-product.css";
 
 
 function ProductCard({ product }) {
-const getAvailabilityMessage = () => {
+  const getAvailabilityMessage = () => {
     if (product.available) {
       return `In stock: ${product.itemsLeft} left`;
     } else {

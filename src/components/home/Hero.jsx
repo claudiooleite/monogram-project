@@ -1,6 +1,6 @@
 
-import image from "../assets/images/headphones-3085681_1280.jpg"
-import "../assets/styles/hero.css"
+import image from "../../assets/images/headphones-3085681_1280.jpg"
+import "./hero.css"
 
 
 function Hero() {

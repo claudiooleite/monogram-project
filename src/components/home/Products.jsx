@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Cards from "./Cards" // Ensure the correct import
-import { musicItems } from "../data/musicItems";
-import "../assets/styles/products.css";
+import Cards from "./Cards" 
+import { musicItems } from "../../data/musicItems";
+import "./products.css";
 
 function Products() {
     const [hoveredIndex, setHoveredIndex] = useState(null);

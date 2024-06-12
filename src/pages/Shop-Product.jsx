@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import ProductCard from "../components/Shop-Product-Card";
-import "../assets/styles/shop-product.css"
+import Nav from "../components/common/Nav";
+import Footer from "../components/common/Footer";
+import ProductCard from "../components/product/Shop-Product-Card";
+import "../components/product/shop-product.css"
 import { musicItems } from "../data/musicItems";
 
 function ShopProduct() {

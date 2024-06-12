@@ -1,7 +1,7 @@
-import Hero from "../components/Hero"
-import Products from "../components/Products"
-import Footer from "../components/Footer"
-import Nav from "../components/Nav"
+import Hero from "../components/home/Hero"
+import Products from "../components/home/Products"
+import Footer from "../components/common/Footer"
+import Nav from "../components/common/Nav"
 
 function Home() {
     return (

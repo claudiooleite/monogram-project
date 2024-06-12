@@ -1,4 +1,4 @@
-import "../assets/styles/footer.css"
+import "../../assets/styles/footer.css"
 import { Link } from "react-router-dom";
 
 
