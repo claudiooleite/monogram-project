@@ -32,10 +32,10 @@ function ShopProduct() {
                     <div className="gridImages3"><img src={musicItems[0].images[0]} alt="" /></div>
                 </div>
                 <div className="div2 flex-container">
-                    <div class="flex-items">
+                    <div className="flex-items">
                         <ProductCard product={product} />
                     </div>
-                    <div class="flex-items"></div>
+                    <div className="flex-items"></div>
                 </div>
                 <div className="div3">
                     <h2>MULTI-INSTRUMENT CONFIGURATOR APP</h2>
@@ -51,8 +51,8 @@ function ShopProduct() {
 
                 </div>
                 <div className="div4">
-                    <div class="calltoaction">
-                        <div class="child-calltoaction">
+                    <div className="calltoaction">
+                        <div className="child-calltoaction">
                             <h2>Everyday Essentials</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>

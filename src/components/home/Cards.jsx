@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function Card({ item, index, handleHoverIn, handleHoverOut, hoveredIndex }) {
     return (
         <div className={`card ${item.name}`}>
+            <Link to={`/product/${index}`}>
             <article className={`article-card ${item.name}`} >
                 <header
                     className={`article img-bg ${item.name}`}
@@ -14,7 +15,7 @@ function Card({ item, index, handleHoverIn, handleHoverOut, hoveredIndex }) {
                         alt={item.alt}
                         className="card-image"
                     />
-                    <Link to={`/product/${index}`}><p className="pre-order-badge">Pre-order</p></Link>
+                    <p className="pre-order-badge">Pre-order</p>
                 </header>
                 <div className="card-content">
                     <div className="card-header-price">
@@ -24,6 +25,7 @@ function Card({ item, index, handleHoverIn, handleHoverOut, hoveredIndex }) {
                     <p className="card-content-description">{item.description}</p>
                 </div>
             </article>
+            </Link>
         </div>
     );
 }

@@ -58,7 +58,7 @@ export const musicItems = [
   {
     name: "Synthesizer",
     price: 399.99,
-    images: [imageSynth1, image2],
+    images: [imageSynth1, imageSynth1],
     alt: "Synthesizer",
     description: "Electronic sounds for modern music.",
     available: true,
