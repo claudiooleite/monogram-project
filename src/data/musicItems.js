@@ -1,8 +1,14 @@
 import image1 from "../assets/images/acoustic-guitar-2-removebg-preview.png";
 import image2 from "../assets/images/acoustic-guitar-1.jpg";
-import image3 from "../assets/images/electric-guitar-1669233_1280.png";
-import image4 from "../assets/images/electricguitar1.jpg";
-import imageSynth1 from "../assets/images/vintage-synthesizer-1601935_1920-removebg-preview.png";
+import image3 from "../assets/images/elguit1.jpg";
+import image4 from "../assets/images/elguit2.jpg";
+import image5 from "../assets/images/bass2.jpg";
+import image6 from "../assets/images/bass1.jpg";
+import image7 from "../assets/images/drum1.jpg";
+import image8 from "../assets/images/drum2.jpg";
+import image9 from "../assets/images/synth1.png";
+import image10 from "../assets/images/synth2.jpg";
+import image11 from "../assets/images/synth3.jpg";
 
 export const musicItems = [
   {
@@ -34,7 +40,7 @@ export const musicItems = [
   {
     name: "Bass Guitar",
     price: 249.99,
-    images: [image1, image2],
+    images: [image5, image6],
     alt: "Bass Guitar",
     description: "Deep, rich tones for any music style.",
     available: true,
@@ -46,7 +52,7 @@ export const musicItems = [
   {
     name: "Drum Set",
     price: 499.99,
-    images: [image1, image2],
+    images: [image7, image8],
     alt: "Drum Set",
     description: "Complete set for aspiring drummers.",
     available: false,
@@ -58,7 +64,7 @@ export const musicItems = [
   {
     name: "Synthesizer",
     price: 399.99,
-    images: [imageSynth1, imageSynth1],
+    images: [image9, image10, image11],
     alt: "Synthesizer",
     description: "Electronic sounds for modern music.",
     available: true,

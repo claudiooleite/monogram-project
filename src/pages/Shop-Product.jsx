@@ -11,8 +11,8 @@ import ReviewCard from "../components/product/ReviewsCard";
 import { customersSay } from "../data/reviews";
 
 function ShopProduct() {
-    const { productId } = useParams();
-    const product = musicItems[productId];
+    const { productName } = useParams();
+    const product = musicItems.find(item => item.name === productName);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     function handleHoverIn(index) {
@@ -22,14 +22,17 @@ function ShopProduct() {
     function handleHoverOut() {
         setHoveredIndex(null);
     }
+    if (!product) {
+        return <p>Product not found</p>;
+      }
     return (
         <div className="parent-container">
             <Nav />
             <div className="cssportal-grid">
                 <div className="div1 gridImagesMain">
-                    <div className="gridImages1"><img src={musicItems[0].images[0]} alt="" /></div>
-                    <div className="gridImages2"><img src={musicItems[0].images[0]} alt="" /></div>
-                    <div className="gridImages3"><img src={musicItems[0].images[0]} alt="" /></div>
+                    <div className="gridImages1"><img src={product.images[0]} alt="" /></div>
+                    <div className="gridImages2"><img src={product.images[1]} alt="" /></div>
+                    <div className="gridImages3"><img src={product.images[1]} alt="" /></div>
                 </div>
                 <div className="div2 flex-container">
                     <div className="flex-items">

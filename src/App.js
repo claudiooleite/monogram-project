@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/product/:productId" element={<ShopProduct />} />
+      <Route path="/product/:productName" element={<ShopProduct />} />
       <Route path="*" element={<WrongWay />} />
     </Routes>
   );
