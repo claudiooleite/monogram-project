@@ -24,7 +24,7 @@ function ShopProduct() {
     }
     if (!product) {
         return <p>Product not found</p>;
-      }
+    }
     return (
         <div className="parent-container">
             <Nav />

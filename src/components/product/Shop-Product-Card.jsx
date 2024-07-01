@@ -5,6 +5,13 @@ import BasketSummary from "./PreviewBasket";
 import AccordionInfo from "./AccordionInfo";
 import "./shop-product.css";
 
+const stars = {
+  1: "★☆☆☆☆",
+  2: "★★☆☆☆",
+  3: "★★★☆☆",
+  4: "★★★★☆",
+  5: "★★★★★",
+};
 
 function ProductCard({ product }) {
   const { addToBasket } = useContext(BasketContext);
@@ -25,14 +32,16 @@ function ProductCard({ product }) {
 
   return (
     <>
-      <h1>
-        {product.name} {product.available ? "" : <span>Pre Order</span>}
+      <h1 className="header-product">
+        {product.name} {product.available ? "" : <span style={{ background: '#ff8d6b' }}> Pre Order </span>}
       </h1>
       <div>
-        <h2>${product.price}</h2>
-        <h1>Reviews: {product.numReviews}</h1>
-        <h1>Rating: {product.rating} stars</h1>
-        <button onClick={() => handleAddToBasket(product)}>Add to Basket</button>
+        <div className="price-rating">
+          <h2>${product.price}</h2>
+          <h1>{product.rating}  {stars[Math.round(product.rating)]}</h1>
+        </div>
+        <button className="button" onClick={() => handleAddToBasket(product)}>{product.available ? "Add to Basket" : "Pre Order"}</button>
+    
         <BasketSummary isOpen={isOpen} onClose={onClose} />
       </div>
       <h2>{getAvailabilityMessage()}</h2>

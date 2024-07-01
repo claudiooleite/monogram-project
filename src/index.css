@@ -3,7 +3,6 @@ img {
 }
 html,
 body,
-
 body {
   margin: 0;
   font-family: "Prompt", sans-serif;
@@ -14,4 +13,8 @@ body {
   line-height: 1.5;
   margin: 0;
   text-align: left;
+}
+
+*{
+  font-family: "Prompt", sans-serif;
 }
