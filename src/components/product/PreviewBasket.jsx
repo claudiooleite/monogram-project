@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import BasketContext from '../../hooks/basketContext';
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button } from '@chakra-ui/react';
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button, DrawerFooter, Stack } from '@chakra-ui/react';
 
 const BasketSummary = ({ isOpen, onClose }) => {
   const { basket, addToBasket, removeFromBasket } = useContext(BasketContext);
@@ -9,12 +10,16 @@ const BasketSummary = ({ isOpen, onClose }) => {
     <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton />
+        <DrawerCloseButton alignItems={'flex-end'} />
         <DrawerHeader borderBottomWidth='1px'>Continue Shopping</DrawerHeader>
         <DrawerBody>
+
           <h2>Basket Summary</h2>
           {basket.length === 0 ? (
-            <p>Your Basket is empty</p>
+            <>
+              <p>NOTHING IN YOUR BAG!</p>
+              <p>Start shopping to see if you qualify for free shipping.</p>
+            </>
           ) : (
             <ul>
               {basket.map((item, index) => (
@@ -34,7 +39,15 @@ const BasketSummary = ({ isOpen, onClose }) => {
               ))}
             </ul>
           )}
+
         </DrawerBody>
+        <DrawerFooter>
+          <p>Subtotal</p>
+          <p>$0</p>
+          <Link to={'/checkout'}>
+            <Button>Checkout</Button>
+          </Link>
+        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
