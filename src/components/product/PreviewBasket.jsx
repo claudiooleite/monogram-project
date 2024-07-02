@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
 import BasketContext from '../../hooks/basketContext';
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton } from '@chakra-ui/react';
-
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button } from '@chakra-ui/react';
 
 const BasketSummary = ({ isOpen, onClose }) => {
-  const { basket } = useContext(BasketContext);
+  const { basket, addToBasket, removeFromBasket } = useContext(BasketContext);
 
   return (
     <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton/>
+        <DrawerCloseButton />
         <DrawerHeader borderBottomWidth='1px'>Continue Shopping</DrawerHeader>
         <DrawerBody>
           <h2>Basket Summary</h2>
@@ -25,6 +24,11 @@ const BasketSummary = ({ isOpen, onClose }) => {
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
                     <p>Price: ${item.price}</p>
+                    <p>Quantity: {item.quantity}</p>
+                    <div>
+                      <Button onClick={() => addToBasket(item)}>+</Button>
+                      <Button onClick={() => removeFromBasket(item)}>-</Button>
+                    </div>
                   </div>
                 </li>
               ))}
@@ -32,8 +36,7 @@ const BasketSummary = ({ isOpen, onClose }) => {
           )}
         </DrawerBody>
       </DrawerContent>
-    </Drawer >
-
+    </Drawer>
   );
 };
 
