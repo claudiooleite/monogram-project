@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
+import { useDisclosure } from "@chakra-ui/react";
+import { useState, useContext } from "react";
 import Nav from "../components/common/Nav";
 import Footer from "../components/common/Footer";
+import BasketSummary from "../components/product/PreviewBasket";
 import ProductCard from "../components/product/Shop-Product-Card";
 import "../components/product/shop-product.css"
 import { musicItems } from "../data/musicItems";
-import { useState } from "react";
+import BasketContext from "../hooks/basketContext";
 import Card from "../components/home/Cards";
 import "../components/home/products.css";
 import ReviewCard from "../components/product/ReviewsCard";
@@ -15,6 +18,9 @@ function ShopProduct() {
     const product = musicItems.find(item => item.name === productName);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { addToBasket } = useContext(BasketContext);
+
     function handleHoverIn(index) {
         setHoveredIndex(index);
     }
@@ -22,12 +28,19 @@ function ShopProduct() {
     function handleHoverOut() {
         setHoveredIndex(null);
     }
+
+    const handleAddToBasket = (item) => {
+        addToBasket(item);
+        onOpen();
+    };
+
     if (!product) {
         return <p>Product not found</p>;
     }
+
     return (
         <div className="parent-container">
-            <Nav />
+            <Nav onOpen={onOpen} />
             <div className="cssportal-grid">
                 <div className="div1 gridImagesMain">
                     <div className="gridImages1"><img src={product.images[0]} alt="" /></div>
@@ -36,7 +49,7 @@ function ShopProduct() {
                 </div>
                 <div className="div2 flex-container">
                     <div className="flex-items">
-                        <ProductCard product={product} />
+                        <ProductCard product={product} handleAddToBasket={handleAddToBasket} />
                     </div>
                     <div className="flex-items"></div>
                 </div>
@@ -51,7 +64,6 @@ function ShopProduct() {
                         <li><strong>Digital Labeling and On-Screen Previews</strong>: Digitally label your instrument modules and bring up an on-screen preview to keep track of your settings effortlessly.</li>
                         <li><strong>Expand Your Creativity</strong>: Unlock new possibilities with specialized packs for Audio, Photo, and Video editing, providing your instruments with hundreds of additional functions and profiles.</li>
                     </ul>
-
                 </div>
                 <div className="div4">
                     <div className="calltoaction">
@@ -85,9 +97,10 @@ function ShopProduct() {
                     </div>
                 </div>
             </div>
+            <BasketSummary isOpen={isOpen} onClose={onClose} />
             <Footer />
         </div>
-    )
+    );
 }
 
 export default ShopProduct;
