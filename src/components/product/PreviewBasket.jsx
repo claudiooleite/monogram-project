@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import BasketContext from '../../hooks/basketContext';
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody } from '@chakra-ui/react';
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton } from '@chakra-ui/react';
 
 
 const BasketSummary = ({ isOpen, onClose }) => {
@@ -10,7 +10,8 @@ const BasketSummary = ({ isOpen, onClose }) => {
     <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
+        <DrawerCloseButton/>
+        <DrawerHeader borderBottomWidth='1px'>Continue Shopping</DrawerHeader>
         <DrawerBody>
           <h2>Basket Summary</h2>
           {basket.length === 0 ? (
