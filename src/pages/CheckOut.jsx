@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import {
@@ -15,12 +15,19 @@ import {
     Grid,
     GridItem,
     FormErrorMessage,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    ModalFooter,
 } from '@chakra-ui/react';
 import BasketContext from '../hooks/basketContext';
 
-
 function CheckOut() {
     const { basket } = useContext(BasketContext);
+    const [isModalOpen, setModalOpen] = useState(false);
 
     const formik = useFormik({
         initialValues: {
@@ -53,7 +60,7 @@ function CheckOut() {
             nameOnCard: Yup.string().required('Name on Card is required'),
         }),
         onSubmit: (values) => {
-            console.log(values);
+            setModalOpen(true);
         },
     });
 
@@ -282,6 +289,38 @@ function CheckOut() {
                     </Box>
                 </GridItem>
             </Grid>
+
+            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} size="xl">
+                <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(10px)" />
+                <ModalContent>
+                    <ModalHeader>Order Overview</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        <VStack spacing={4} align="stretch">
+                            <Heading as="h3" size="md">Thank you for your order!</Heading>
+                            {basket.length > 0 ? (
+                                basket.map((item, index) => (
+                                    <Box key={index} mb={4}>
+                                        <Text><strong>{item.name}</strong></Text>
+                                        <Text>{item.description}</Text>
+                                        <Text><strong>Price:</strong> ${item.price.toFixed(2)}</Text>
+                                        <Text><strong>Quantity:</strong> {item.quantity}</Text>
+                                        <Text><strong>Total:</strong> ${(item.price * item.quantity).toFixed(2)}</Text>
+                                    </Box>
+                                ))
+                            ) : (
+                                <Text>Your basket is empty.</Text>
+                            )}
+                            <Text>This is a test website to show my skills as a frontend developer. Thank you for reaching this point and testing the website.</Text>
+                        </VStack>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={() => setModalOpen(false)}>
+                            Close
+                        </Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
         </>
     );
 }
