@@ -10,7 +10,7 @@ function Hero() {
             backgroundImage: `url(${image})`
         }}>
             <div className="hero-content">
-                <h1>A Instrument for Every Musician</h1>
+                <h1>An Instrument for Every Musician</h1>
                 <p>Discover the perfect instrument for you.</p>
 
             </div>
