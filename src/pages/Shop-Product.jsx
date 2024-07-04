@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/react";
 import { useState, useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Nav from "../components/common/Nav";
 import Footer from "../components/common/Footer";
 import BasketSummary from "../components/product/PreviewBasket";
 import ProductCard from "../components/product/Shop-Product-Card";
-import "../components/product/shop-product.css"
+import "../components/product/shop-product.css";
 import { musicItems } from "../data/musicItems";
 import BasketContext from "../hooks/basketContext";
 import Card from "../components/home/Cards";
@@ -17,6 +19,7 @@ function ShopProduct() {
     const { productName } = useParams();
     const product = musicItems.find(item => item.name === productName);
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { addToBasket } = useContext(BasketContext);
@@ -34,6 +37,16 @@ function ShopProduct() {
         onOpen();
     };
 
+    const handleNextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % product.images.length);
+    };
+
+    const handlePreviousImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? product.images.length - 1 : prevIndex - 1
+        );
+    };
+
     if (!product) {
         return <p>Product not found</p>;
     }
@@ -43,9 +56,17 @@ function ShopProduct() {
             <Nav onOpen={onOpen} />
             <div className="cssportal-grid">
                 <div className="div1 gridImagesMain">
-                    <div className="gridImages1"><img src={product.images[0]} alt="" /></div>
-                    <div className="gridImages2"><img src={product.images[1]} alt="" /></div>
-                    <div className="gridImages3"><img src={product.images[1]} alt="" /></div>
+                    <div className="carousel-container">
+                        <div className="carousel-arrow left-arrow" onClick={handlePreviousImage}>
+                            <FontAwesomeIcon icon={faChevronLeft} />
+                        </div>
+                        <div className="gridImages1">
+                            <img src={product.images[currentImageIndex]} alt="" className="carousel-image" />
+                        </div>
+                        <div className="carousel-arrow right-arrow" onClick={handleNextImage}>
+                            <FontAwesomeIcon icon={faChevronRight} />
+                        </div>
+                    </div>
                 </div>
                 <div className="div2 flex-container">
                     <div className="flex-items">
