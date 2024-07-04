@@ -12,6 +12,7 @@ const BasketSummary = ({ isOpen, onClose }) => {
       <DrawerContent>
         <DrawerCloseButton alignItems={'flex-end'} />
         <DrawerHeader borderBottomWidth='1px'>Continue Shopping</DrawerHeader>
+
         <DrawerBody>
 
           <h2>Basket Summary</h2>
@@ -41,9 +42,12 @@ const BasketSummary = ({ isOpen, onClose }) => {
           )}
 
         </DrawerBody>
-        <DrawerFooter>
-          <p>Subtotal</p>
-          <p>$0</p>
+        <DrawerFooter borderTopWidth='1px' style={{ height: 'auto' }} >
+          <div>
+            <p>Subtotal</p>
+            <p>$0</p>
+          </div>
+
           <Link to={'/checkout'}>
             <Button>Checkout</Button>
           </Link>
