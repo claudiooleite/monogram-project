@@ -17,8 +17,8 @@
 }
 
 .review-card .customer-img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
@@ -39,4 +39,12 @@
 .review-card .testimonial {
   font-size: 16px;
   color: #666;
+}
+
+.review-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+
 }

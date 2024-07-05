@@ -90,6 +90,7 @@
 }
 
 .flex-items > h2 {
+  margin-top: 5px;
   margin-bottom: 20px;
   padding-left: 16px;
 }
@@ -254,4 +255,9 @@
 .drawer-footer{
   flex-direction: column;
   gap: 10px;
+}
+
+#total-color{
+  font-weight: bold;
+  color: #ff7043;
 }

@@ -44,7 +44,6 @@ const BasketSummary = ({ isOpen, onClose }) => {
         </DrawerBody>
         <DrawerFooter className='drawer-footer' borderTopWidth='1px' style={{ height: 'auto' }} >
           <div>
-            <h2>Basket Summary</h2>
             <ul>
               {basket.map((item, index) => (
                 <li key={index}>
@@ -52,7 +51,7 @@ const BasketSummary = ({ isOpen, onClose }) => {
                 </li>
               ))}
             </ul>
-            <h3>Total: ${total.toFixed(2)}</h3>
+            <h3 id='total-color'>Total: ${total.toFixed(2)}</h3>
           </div>
           <Link to={'/checkout'}>
             <Button>Checkout</Button>
