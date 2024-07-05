@@ -26,7 +26,7 @@ import {
 import BasketContext from '../hooks/basketContext';
 
 function CheckOut() {
-    const { basket } = useContext(BasketContext);
+    const { basket, total } = useContext(BasketContext);
     const [isModalOpen, setModalOpen] = useState(false);
 
     const formik = useFormik({
@@ -286,6 +286,7 @@ function CheckOut() {
                                 </Box>
                             ))
                         )}
+                        <Heading>Total: ${total.toFixed(2)}</Heading>
                     </Box>
                 </GridItem>
             </Grid>
