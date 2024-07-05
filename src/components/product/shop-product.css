@@ -1,14 +1,18 @@
 .parent-container {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   background-color: #f0efed;
+}
+.main-content {
+  flex: 1;
 }
 
 .cssportal-grid {
   padding-top: 130px;
   display: grid;
-  grid-template-rows: repeat(4, 0.5fr) 1fr;
+  grid-template-rows: repeat(5, 0.5fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 100%;
@@ -168,48 +172,47 @@
 
 /* Carousel Container */
 .carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    color: #ff8d6b;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #ff8d6b;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .left-arrow {
-    left: 10px;
+  left: 10px;
 }
 
 .right-arrow {
-    right: 10px;
+  right: 10px;
 }
 
 .gridImages1 {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
-
 
 .calltoaction {
   display: flex;
