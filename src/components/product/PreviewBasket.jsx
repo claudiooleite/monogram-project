@@ -4,7 +4,7 @@ import BasketContext from '../../hooks/basketContext';
 import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button, DrawerFooter, Stack } from '@chakra-ui/react';
 
 const BasketSummary = ({ isOpen, onClose }) => {
-  const { basket, addToBasket, removeFromBasket } = useContext(BasketContext);
+  const { basket, addToBasket, removeFromBasket, total } = useContext(BasketContext);
 
   return (
     <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
@@ -42,12 +42,18 @@ const BasketSummary = ({ isOpen, onClose }) => {
           )}
 
         </DrawerBody>
-        <DrawerFooter borderTopWidth='1px' style={{ height: 'auto' }} >
+        <DrawerFooter className='drawer-footer' borderTopWidth='1px' style={{ height: 'auto' }} >
           <div>
-            <p>Subtotal</p>
-            <p>$0</p>
+            <h2>Basket Summary</h2>
+            <ul>
+              {basket.map((item, index) => (
+                <li key={index}>
+                  {item.name} - {item.quantity} x ${item.price}
+                </li>
+              ))}
+            </ul>
+            <h3>Total: ${total.toFixed(2)}</h3>
           </div>
-
           <Link to={'/checkout'}>
             <Button>Checkout</Button>
           </Link>

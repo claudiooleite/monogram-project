@@ -165,10 +165,7 @@
   column-gap: 10px;
 }
 
-/* .div7 {
-  grid-area: 5 / 1 / 6 / 3;
-  background-color: rgba(213, 189, 89, 0.5);
-} */
+
 
 /* Carousel Container */
 .carousel-container {
@@ -252,4 +249,9 @@
 
 .child-calltoaction button:hover {
   background-color: #ff7043;
+}
+
+.drawer-footer{
+  flex-direction: column;
+  gap: 10px;
 }
