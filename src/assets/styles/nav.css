@@ -38,6 +38,9 @@
 .nav-logo > h1 {
   text-transform: uppercase;
   font-size: 0.8rem;
+   font-weight: 300;
+   color: #1a2456;
+   padding-left: 10px;
 }
 
 .nav-links {
@@ -86,4 +89,18 @@ span.basket-badge {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo > h1 {
+    display: none;
+  }
+
+  .chakra-button {
+    display: block;
+  }
 }

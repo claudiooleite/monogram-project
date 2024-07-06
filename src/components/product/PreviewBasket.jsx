@@ -53,8 +53,8 @@ const BasketSummary = ({ isOpen, onClose }) => {
             </ul>
             <h3 id='total-color'>Total: ${total.toFixed(2)}</h3>
           </div>
-          <Link to={'/checkout'}>
-            <Button>Checkout</Button>
+          <Link to={basket.length === 0 ? '#' : '/checkout'}>
+            <Button disabled={basket.length === 0}>Checkout</Button>
           </Link>
         </DrawerFooter>
       </DrawerContent>

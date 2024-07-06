@@ -5,6 +5,7 @@ import { FiShoppingBag } from "react-icons/fi"; // Import shopping cart icon
 import '../../assets/styles/nav.css';
 import BasketContext from "../../hooks/basketContext";
 import Image1 from "../../assets/images/logo2.png";
+import HamburgerMenu from "./HamburgerMenu"; // Import the HamburgerMenu component
 
 const Nav = ({ onOpen }) => {
   const { basket } = useContext(BasketContext);
@@ -42,6 +43,7 @@ const Nav = ({ onOpen }) => {
           </li>
           <li><Link to="/cleng">Leng</Link></li>
         </ul>
+        <HamburgerMenu />
       </nav>
     </div>
   );
