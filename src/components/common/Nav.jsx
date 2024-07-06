@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Box, Badge, IconButton } from "@chakra-ui/react";
+import { Badge, IconButton } from "@chakra-ui/react";
 import { FiShoppingBag } from "react-icons/fi"; // Import shopping cart icon
 import '../../assets/styles/nav.css';
 import BasketContext from "../../hooks/basketContext";

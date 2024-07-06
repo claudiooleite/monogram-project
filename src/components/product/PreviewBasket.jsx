@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import BasketContext from '../../hooks/basketContext';
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button, DrawerFooter, Stack } from '@chakra-ui/react';
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Button, DrawerFooter} from '@chakra-ui/react';
 
 const BasketSummary = ({ isOpen, onClose }) => {
   const { basket, addToBasket, removeFromBasket, total } = useContext(BasketContext);
