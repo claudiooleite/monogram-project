@@ -29,11 +29,6 @@ const Nav = ({ onOpen, productsRef }) => {
           <h1>Music Store</h1>
         </Link>
         <ul className="nav-links">
-          <li><Link to="/howitworks">How It Works</Link></li>
-          <li><Link to="/workflow">Workflows</Link></li>
-          <li><Link to="/download">Download</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/support">Support</Link></li>
           <li><a href="/shop" onClick={handleShopClick}>Shop</a></li>
           <li className="basket-container">
             <IconButton
@@ -52,7 +47,6 @@ const Nav = ({ onOpen, productsRef }) => {
               </Badge>
             )}
           </li>
-          <li><Link to="/cleng">Leng</Link></li>
         </ul>
         <HamburgerMenu />
       </nav>
