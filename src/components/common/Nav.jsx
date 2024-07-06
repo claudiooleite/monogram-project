@@ -1,14 +1,25 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Badge, IconButton } from "@chakra-ui/react";
-import { FiShoppingBag } from "react-icons/fi"; // Import shopping cart icon
+import { FiShoppingBag } from "react-icons/fi";
 import '../../assets/styles/nav.css';
 import BasketContext from "../../hooks/basketContext";
 import Image1 from "../../assets/images/logo2.png";
-import HamburgerMenu from "./HamburgerMenu"; // Import the HamburgerMenu component
+import HamburgerMenu from "./HamburgerMenu";
 
-const Nav = ({ onOpen }) => {
+const Nav = ({ onOpen, productsRef }) => {
   const { basket } = useContext(BasketContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleShopClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      productsRef.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/", { state: { scrollToProducts: true } });
+    }
+  };
 
   return (
     <div className="nav-position-fixed">
@@ -23,7 +34,7 @@ const Nav = ({ onOpen }) => {
           <li><Link to="/download">Download</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/support">Support</Link></li>
-          <li><Link to="/shop">Shop</Link></li>
+          <li><a href="/shop" onClick={handleShopClick}>Shop</a></li>
           <li className="basket-container">
             <IconButton
               icon={<FiShoppingBag />}
