@@ -6,6 +6,7 @@ import BasketContext from '../hooks/basketContext';
 import Header from '../components/checkout/Header';
 import CheckoutForm from '../components/checkout/CheckoutForm';
 import OrderOverview from '../components/checkout/OrderOverview';
+import "../components/checkout/checkout.css"
 
 function CheckOut() {
     const { basket, total } = useContext(BasketContext);
@@ -47,47 +48,49 @@ function CheckOut() {
     });
 
     return (
-        <>
-            <Header />
-            <Grid templateColumns="1fr 1fr" gap={6} p={6} bg="#F0EFED">
-                <GridItem paddingRight="40px" borderRight="0.5px solid #CBD5E0">
-                    <CheckoutForm formik={formik} />
-                </GridItem>
-                <GridItem>
-                    <OrderOverview basket={basket} total={total} />
-                </GridItem>
-            </Grid>
+        <div className='bkg-container'>
+            <div className='container-checkout'>
+                <Header />
+                <Grid templateColumns="1fr 1fr" gap={6} p={6} bg="#F0EFED">
+                    <GridItem paddingRight="40px" borderRight="0.5px solid #CBD5E0">
+                        <CheckoutForm formik={formik} />
+                    </GridItem>
+                    <GridItem>
+                        <OrderOverview basket={basket} total={total} />
+                    </GridItem>
+                </Grid>
 
-            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} size="xl">
-                <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(10px)" />
-                <ModalContent>
-                    <ModalHeader>Order Overview</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <VStack spacing={4} align="stretch">
-                            <Heading as="h3" size="md">Thank you for your order!</Heading>
-                            {basket.length > 0 ? (
-                                basket.map((item, index) => (
-                                    <Box key={index} mb={4}>
-                                        <Text><strong>{item.name}</strong></Text>
-                                        <Text>{item.description}</Text>
-                                        <Text><strong>Price:</strong> ${item.price.toFixed(2)}</Text>
-                                        <Text><strong>Quantity:</strong> {item.quantity}</Text>
-                                        <Text><strong>Total:</strong> ${(item.price * item.quantity).toFixed(2)}</Text>
-                                    </Box>
-                                ))
-                            ) : (
-                                <Text>Your basket is empty.</Text>
-                            )}
-                            <Text>This is a test website to show my skills as a frontend developer. Thank you for reaching this point and testing the website.</Text>
-                        </VStack>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={() => setModalOpen(false)}>Close</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
-        </>
+                <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} size="xl">
+                    <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(10px)" />
+                    <ModalContent>
+                        <ModalHeader>Order Overview</ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <VStack spacing={4} align="stretch">
+                                <Heading as="h3" size="md">Thank you for your order!</Heading>
+                                {basket.length > 0 ? (
+                                    basket.map((item, index) => (
+                                        <Box key={index} mb={4}>
+                                            <Text><strong>{item.name}</strong></Text>
+                                            <Text>{item.description}</Text>
+                                            <Text><strong>Price:</strong> ${item.price.toFixed(2)}</Text>
+                                            <Text><strong>Quantity:</strong> {item.quantity}</Text>
+                                            <Text><strong>Total:</strong> ${(item.price * item.quantity).toFixed(2)}</Text>
+                                        </Box>
+                                    ))
+                                ) : (
+                                    <Text>Your basket is empty.</Text>
+                                )}
+                                <Text>This is a test website to show my skills as a frontend developer. Thank you for reaching this point and testing the website.</Text>
+                            </VStack>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button colorScheme="blue" mr={3} onClick={() => setModalOpen(false)}>Close</Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
+            </div>
+        </div>
     );
 }
 
