@@ -4,7 +4,6 @@ const BasketContext = createContext();
 
 export const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useState([]);
-  const [total2, setTotal2] = useState(0);
 
   const addToBasket = (item) => {
     setBasket((prevBasket) => {
@@ -43,9 +42,9 @@ export const BasketProvider = ({ children }) => {
   const total = useMemo(() => {
     return basket.reduce((acc, item) => acc + item.price * item.quantity, 0);
   }, [basket]);
+
   const clearBasket = () => {
     setBasket([]);
-    setTotal2(0);
   };
 
   return (
