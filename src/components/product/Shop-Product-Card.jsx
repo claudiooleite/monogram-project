@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import BasketContext from "../../hooks/basketContext";
+import React from "react";
+import PropTypes from "prop-types";
 import AccordionInfo from "./AccordionInfo";
 import "./shop-product.css";
 
@@ -12,8 +12,6 @@ const stars = {
 };
 
 function ProductCard({ product, handleAddToBasket }) {
-  const { addToBasket } = useContext(BasketContext);
-
   const getAvailabilityMessage = () => {
     if (product.available) {
       return `In stock: ${product.itemsLeft} left`;
@@ -41,5 +39,18 @@ function ProductCard({ product, handleAddToBasket }) {
     </>
   );
 }
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    available: PropTypes.bool.isRequired,
+    itemsLeft: PropTypes.number,
+    restockDate: PropTypes.string,
+    price: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  handleAddToBasket: PropTypes.func.isRequired,
+};
 
 export default ProductCard;
