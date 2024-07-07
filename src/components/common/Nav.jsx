@@ -29,7 +29,7 @@ const Nav = ({ onOpen, productsRef }) => {
           <h1>Music Store</h1>
         </Link>
         <ul className="nav-links">
-          <li><a href="/shop" onClick={handleShopClick}>Shop</a></li>
+          <li><a href="/shop" className="nav-shop-link" onClick={handleShopClick}>Shop</a></li>
           <li className="basket-container">
             <IconButton
               icon={<FiShoppingBag />}

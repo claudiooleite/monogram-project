@@ -7,8 +7,8 @@ const HamburgerMenu = () => {
 
     return (
         <>
-            <Button onClick={onOpen} display={{ base: "block", md: "none" }}>
-                <FiMenu />
+            <Button bg={'#1a2456'} onClick={onOpen} >
+                <FiMenu size={'30'} color="rgb(239, 194, 179)" />
             </Button>
             <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
                 <DrawerOverlay />
@@ -17,13 +17,7 @@ const HamburgerMenu = () => {
                     <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
                         <ul className="nav-links-mobile">
-                            <li><Link to="/howitworks" onClick={onClose}>How It Works</Link></li>
-                            <li><Link to="/workflow" onClick={onClose}>Workflows</Link></li>
-                            <li><Link to="/download" onClick={onClose}>Download</Link></li>
-                            <li><Link to="/blog" onClick={onClose}>Blog</Link></li>
-                            <li><Link to="/support" onClick={onClose}>Support</Link></li>
                             <li><Link to="/shop" onClick={onClose}>Shop</Link></li>
-                            <li><Link to="/cleng" onClick={onClose}>Leng</Link></li>
                         </ul>
                     </DrawerBody>
                 </DrawerContent>

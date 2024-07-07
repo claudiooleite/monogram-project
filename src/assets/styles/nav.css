@@ -92,10 +92,13 @@ span.basket-badge {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-shop-link {
     display: none;
   }
-
+.nav-parent {
+  padding: 0;
+  margin: 0.5rem;
+}
   .nav-logo > h1 {
     display: none;
   }

@@ -95,3 +95,16 @@
   width: 100%;
   overflow: hidden;
 }
+
+
+@media (max-width: 768px) {
+  .section-grid.section-grid {
+  grid-template-columns:1fr;
+  grid-template-rows: repeat(4, 1fr);
+  margin:0 10px;
+}
+.section-two {
+  margin: 10px;
+}
+
+}
