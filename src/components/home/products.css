@@ -1,4 +1,7 @@
-.section-grid {
+.parent-products{
+  background-color: #f0efed;
+}
+.section-grid.section-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -14,10 +17,11 @@
   width: 100%;
   overflow: hidden;
   margin: auto;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   position: relative;
-  background: #fff;
+  background: #f0efed;
   transition: transform 0.2s ease-in-out;
+  color: #1a2456;
 }
 
 .card:hover {

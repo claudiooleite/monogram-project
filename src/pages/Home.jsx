@@ -18,9 +18,9 @@ function Home() {
     return (
         <>
             <Nav productsRef={productsRef} />
-            <Hero />
-            <div ref={productsRef}>
-                <Products />
+            <Hero productsRef={productsRef} />
+            <div className="parent-products" ref={productsRef}>
+                <Products/>
             </div>
             <Footer />
         </>

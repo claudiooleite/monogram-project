@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cards from "./Cards" 
+import Cards from "./Cards"
 import { musicItems } from "../../data/musicItems";
 import "./products.css";
 
@@ -29,7 +29,7 @@ function Products() {
                 ))}
             </section>
             <section className="section-two">
-            <Cards
+                <Cards
                     item={musicItems[4]}
                     index={4}
                     handleHoverIn={handleHoverIn}

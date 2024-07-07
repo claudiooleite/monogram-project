@@ -29,7 +29,7 @@
 }
 .div2 {
   grid-area: 1/2/2/3;
- 
+ color: #1a2456;
 }
 
 .header-product {
@@ -155,17 +155,26 @@
 }
 .div5 {
   grid-area: 4/1/5/3;
- 
+}
+
+.div5 h1{
+  font-size: 2em;
+  color: #1a2456;
 }
 
 .div6 {
   grid-area: 5/1/6/3;
+  color: #1a2456;
 }
+
+
+
 .small-card-products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
 }
+
 
 
 
@@ -202,7 +211,7 @@
 .gridImages1 {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
