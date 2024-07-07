@@ -9,7 +9,7 @@ import OrderOverview from '../components/checkout/OrderOverview';
 import "../components/checkout/checkout.css"
 
 function CheckOut() {
-    const { basket, total } = useContext(BasketContext);
+    const { basket, total, clearBasket } = useContext(BasketContext);
     const [isModalOpen, setModalOpen] = useState(false);
 
     const formik = useFormik({
@@ -42,8 +42,10 @@ function CheckOut() {
             expirationDate: Yup.string().required('Expiration Date is required'),
             nameOnCard: Yup.string().required('Name on Card is required'),
         }),
-        onSubmit: (values) => {
+        onSubmit: (values, { resetForm }) => {
             setModalOpen(true);
+            resetForm();
+            clearBasket();
         },
     });
 
