@@ -57,7 +57,11 @@ function ShopProduct() {
             <div className="main-content">
                 <div className="cssportal-grid">
                     <div className="div1 gridImagesMain">
+                        <h1 className="product-header-small-screen">
+                            {product.name} {product.available ? "" : <span style={{ background: '#ff8d6b' }}> Pre Order </span>}
+                        </h1>
                         <div className="carousel-container">
+                            
                             <div className="carousel-arrow left-arrow" onClick={handlePreviousImage}>
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </div>

@@ -38,9 +38,9 @@
 .nav-logo > h1 {
   text-transform: uppercase;
   font-size: 0.8rem;
-   font-weight: 300;
-   color: #1a2456;
-   padding-left: 10px;
+  font-weight: 300;
+  color: #1a2456;
+  padding-left: 10px;
 }
 
 .nav-links {
@@ -80,7 +80,7 @@ span.basket-badge {
   position: absolute;
   top: -2px;
   right: -2px;
-  background-color: #FF8D6B;
+  background-color: #ff8d6b;
   color: white;
   font-size: 0.8rem;
   width: 20px;
@@ -95,15 +95,21 @@ span.basket-badge {
   .nav-shop-link {
     display: none;
   }
-.nav-parent {
-  padding: 0;
-  margin: 0.5rem;
-}
+  .nav-parent {
+    padding: 0;
+    margin: 0.5rem;
+  }
   .nav-logo > h1 {
     display: none;
   }
 
   .chakra-button {
     display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-parent > button {
+    display: none;
   }
 }

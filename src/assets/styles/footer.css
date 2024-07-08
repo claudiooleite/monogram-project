@@ -41,3 +41,11 @@ address {
   background-color: #1a2456;
   width: 100%;
 }
+
+@media (max-width: 768px){
+ footer {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-left: 10px;
+}
+}

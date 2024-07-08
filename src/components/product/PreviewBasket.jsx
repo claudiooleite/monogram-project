@@ -10,12 +10,12 @@ const BasketSummary = ({ isOpen, onClose }) => {
     <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton alignItems={'flex-end'} />
-        <DrawerHeader borderBottomWidth='1px'>Continue Shopping</DrawerHeader>
+        <DrawerCloseButton alignItems={'flex-end'} color={'white'}/>
+        <DrawerHeader borderBottomWidth='1px' className='basket-header'>Continue Shopping</DrawerHeader>
 
         <DrawerBody>
 
-          <h2>Basket Summary</h2>
+          <h2 >Basket Summary</h2>
           {basket.length === 0 ? (
             <>
               <p>NOTHING IN YOUR BAG!</p>

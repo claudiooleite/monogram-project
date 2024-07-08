@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer-bg">
         <footer>
             <div className="div-head-1">
-                <h3>Monogram</h3>
+                <h3>Harmony Hub</h3>
                 <address>
                     Lorem ipsum dolor sit.
                     <br />
