@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Button, useDisclosure } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
