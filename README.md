@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Harmony Hub Music Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Harmony Hub Music Store! This project showcases my skills as a frontend developer, demonstrating a range of technologies and techniques used to create a modern, responsive web application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup and Installation](#setup-and-installation)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Harmony Hub Music Store is an e-commerce platform for purchasing musical instruments and accessories. It includes features like a product catalog, detailed product pages, a shopping cart, and a checkout process. This project was built to demonstrate my proficiency in frontend development and modern web technologies.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Responsive Design**: Ensures a seamless experience across different devices and screen sizes.
+- **Product Catalog**: Browse a variety of musical instruments and accessories.
+- **Product Details**: View detailed information and images for each product.
+- **Shopping Cart**: Add, remove, and update items in your basket.
+- **Checkout Process**: Complete your purchase with a smooth and user-friendly checkout flow.
+- **User Feedback**: View customer reviews and ratings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: JavaScript library for building user interfaces.
+- **Chakra UI**: Component library for styling React applications.
+- **Formik**: Library for building and managing forms.
+- **Yup**: JavaScript schema builder for validation.
+- **Font Awesome**: Icon library for adding scalable vector icons.
+- **React Router**: Library for routing in React applications.
+- **ARIA**: Accessibility standards to ensure the application is usable by everyone.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to set up the project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/harmony-hub-music-store.git
+    cd harmony-hub-music-store
+    ```
 
-### `npm run eject`
+2. **Install dependencies**:
+    ```sh
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Start the development server**:
+    ```sh
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Open your browser** and navigate to `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Browse Products**: Navigate through the product catalog to find musical instruments and accessories.
+- **View Product Details**: Click on any product to see more details, including images, descriptions, and reviews.
+- **Add to Cart**: Add items to your shopping cart and manage quantities.
+- **Checkout**: Proceed to checkout to complete your purchase.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+harmony-hub-music-store/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── common/
+│ │ ├── home/
+│ │ ├── product/
+│ │ └── checkout/
+│ ├── data/
+│ ├── hooks/
+│ ├── pages/
+│ ├── App.js
+│ ├── index.js
+│ └── ...
+├── .gitignore
+├── README.md
+├── package.json
+└── ...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+- **components/**: Contains reusable UI components.
+- **data/**: Static data used in the application (e.g., product details, reviews).
+- **hooks/**: Custom hooks for state management and logic.
+- **pages/**: Main pages of the application (e.g., Home, Product, Checkout).
+- **App.js**: Main application component.
+- **index.js**: Entry point of the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! To contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature-name`).
+6. Open a pull request.
 
-### Making a Progressive Web App
+Please ensure your code follows the project's coding standards and includes appropriate tests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+For any inquiries or feedback, please contact me at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Name**: Claudio Leite
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **Website**: [https://harmonyhubproject.netlify.app/](https://harmonyhubproject.netlify.app/)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

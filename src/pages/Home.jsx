@@ -22,10 +22,10 @@ function Home() {
         <>
             <Nav productsRef={productsRef} onOpen={onOpen} />
             <Hero productsRef={productsRef} />
-            <div className="parent-products" ref={productsRef}>
-                <Products/>
+            <div className="parent-products" ref={productsRef} aria-labelledby="products-heading">
+                <Products />
             </div>
-            <BasketSummary isOpen={isOpen} onClose={onClose} />
+            <BasketSummary isOpen={isOpen} onClose={onClose} aria-live="polite" />
             <Footer />
         </>
     );

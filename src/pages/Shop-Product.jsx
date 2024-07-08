@@ -55,20 +55,20 @@ function ShopProduct() {
         <div className="parent-container">
             <Nav onOpen={onOpen} />
             <div className="main-content">
-                <div className="cssportal-grid">
+                <div className="cssportal-grid" aria-labelledby="product-name">
                     <div className="div1 gridImagesMain">
                         <h1 className="product-header-small-screen">
                             {product.name} {product.available ? "" : <span style={{ background: '#ff8d6b' }}> Pre Order </span>}
                         </h1>
-                        <div className="carousel-container">
-                            
-                            <div className="carousel-arrow left-arrow" onClick={handlePreviousImage}>
+                        <div className="carousel-container" aria-live="polite" aria-atomic="true">
+
+                            <div className="carousel-arrow left-arrow" onClick={handlePreviousImage} aria-label="Previous image">
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </div>
                             <div className="gridImages1">
-                                <img src={product.images[currentImageIndex]} alt="" className="carousel-image" />
+                                <img src={product.images[currentImageIndex]} alt={`${product.name}`} className="carousel-image" />
                             </div>
-                            <div className="carousel-arrow right-arrow" onClick={handleNextImage}>
+                            <div className="carousel-arrow right-arrow" onClick={handleNextImage} aria-label="Next image">
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </div>
                         </div>
@@ -91,7 +91,7 @@ function ShopProduct() {
                             <li><strong>Expand Your Creativity</strong>: Unlock new possibilities with specialized packs for Audio, Photo, and Video editing, providing your instruments with hundreds of additional functions and profiles.</li>
                         </ul>
                     </div>
-                    <div className="div4">
+                    <div className="div4" aria-labelledby="cta">
                         <div className="calltoaction">
                             <div className="child-calltoaction">
                                 <h2>Everyday Essentials</h2>
@@ -111,14 +111,15 @@ function ShopProduct() {
                                     index={index}
                                     handleHoverIn={handleHoverIn}
                                     handleHoverOut={handleHoverOut}
-                                    hoveredIndex={hoveredIndex} />
+                                    hoveredIndex={hoveredIndex}
+                                    aria-labelledby={`product-card-${item.name}`} />
                             ))}
                         </div>
                     </div>
-                    <div className="div6">
+                    <div className="div6" aria-labelledby="customer-reviews">
                         <div className="reviews-container">
                             {customersSay.map((review, index) => (
-                                <ReviewCard key={index} review={review} />
+                                <ReviewCard key={index} review={review} aria-labelledby={`review-card-${index}`} />
                             ))}
                         </div>
                     </div>
