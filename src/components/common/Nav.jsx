@@ -48,7 +48,7 @@ const Nav = ({ onOpen, productsRef }) => {
             )}
           </li>
         </ul>
-        <HamburgerMenu />
+        <HamburgerMenu handleShopClick={handleShopClick}/>
       </nav>
     </div>
   );

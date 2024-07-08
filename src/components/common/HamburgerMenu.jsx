@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Button, useDisclosure } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({handleShopClick}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -13,11 +13,11 @@ const HamburgerMenu = () => {
             <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerCloseButton />
-                    <DrawerHeader>Menu</DrawerHeader>
+                    <DrawerCloseButton color={'#f0efed'}/>
+                    <DrawerHeader color={'#f0efed'} bg={'#1a2456'}>Menu</DrawerHeader>
                     <DrawerBody>
                         <ul className="nav-links-mobile">
-                            <li><Link to="/shop" onClick={onClose}>Shop</Link></li>
+                            <li><a href="/shop" onClick={handleShopClick}>Shop</a></li>
                         </ul>
                     </DrawerBody>
                 </DrawerContent>

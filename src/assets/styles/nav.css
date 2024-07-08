@@ -90,6 +90,13 @@ span.basket-badge {
   justify-content: center;
   border-radius: 50%;
 }
+.nav-links-mobile li{
+  color: #1a2456;
+  text-decoration: none;
+  list-style: none;
+  background-color: #ff8d6b;
+
+}
 
 @media (max-width: 768px) {
   .nav-shop-link {
