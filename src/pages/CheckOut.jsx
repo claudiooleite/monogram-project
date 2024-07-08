@@ -1,12 +1,27 @@
 import { useContext, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Grid, GridItem, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, VStack, Box, Button, Text, Heading } from '@chakra-ui/react';
+import {
+    Grid,
+    GridItem,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    ModalFooter,
+    VStack,
+    Box,
+    Button,
+    Text,
+    Heading,
+} from '@chakra-ui/react';
 import BasketContext from '../hooks/basketContext';
 import Header from '../components/checkout/Header';
 import CheckoutForm from '../components/checkout/CheckoutForm';
 import OrderOverview from '../components/checkout/OrderOverview';
-import "../components/checkout/checkout.css"
+import '../components/checkout/checkout.css';
 
 function CheckOut() {
     const { basket, total, clearBasket } = useContext(BasketContext);
@@ -53,11 +68,11 @@ function CheckOut() {
         <div className='bkg-container'>
             <div className='container-checkout'>
                 <Header />
-                <Grid templateColumns="1fr 1fr" gap={6} p={6} bg="#F0EFED">
-                    <GridItem paddingRight="40px" borderRight="0.5px solid #CBD5E0">
+                <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6} p={6} bg="#F0EFED">
+                    <GridItem order={{ base: 2, md: 1 }} paddingRight={{ md: '40px' }} borderRight={{ md: '0.5px solid #CBD5E0' }}>
                         <CheckoutForm formik={formik} />
                     </GridItem>
-                    <GridItem>
+                    <GridItem order={{ base: 1, md: 2 }}>
                         <OrderOverview basket={basket} total={total} />
                     </GridItem>
                 </Grid>
