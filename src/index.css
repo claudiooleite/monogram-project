@@ -2,19 +2,16 @@ img {
   max-width: 100%;
 }
 html,
-body,
 body {
   margin: 0;
   font-family: "Prompt", sans-serif;
-  background-color: #f0efed;
+  background-color: whitesmoke;
   color: #1a2456;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
-  margin: 0;
-  text-align: left;
 }
 
-*{
+* {
   font-family: "Prompt", sans-serif;
 }

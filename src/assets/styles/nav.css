@@ -1,22 +1,19 @@
-.nav-position-fixed {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  top: 0;
+.nav-div {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-parent {
+  position: fixed;
+  width: 90%;
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  letter-spacing: 2px;
-  top: 0;
-  padding: 0.5em;
-  position: relative;
   background-color: #1a2456;
-  margin: 1rem;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -26,7 +23,7 @@
   flex-shrink: 1;
   flex-basis: 20%;
   align-self: auto;
-  color: rgb(239, 194, 179);
+  color: #efc2b3;
   font-weight: 600;
   align-items: center;
 }
@@ -71,9 +68,8 @@ ul.nav-links {
 
 button.basket-button {
   color: rgb(239, 194, 179);
-  font-size: 1.3rem;
-  position: relative;
   background-color: #1a2456;
+  padding: 0px;
 }
 
 span.basket-badge {
@@ -90,22 +86,18 @@ span.basket-badge {
   justify-content: center;
   border-radius: 50%;
 }
-.nav-links-mobile li{
+.nav-links-mobile li {
   color: #1a2456;
   text-decoration: none;
   list-style: none;
   background-color: #ff8d6b;
-
 }
 
 @media (max-width: 768px) {
   .nav-shop-link {
     display: none;
   }
-  .nav-parent {
-    padding: 0;
-    margin: 0.5rem;
-  }
+
   .nav-logo > h1 {
     display: none;
   }

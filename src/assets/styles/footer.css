@@ -6,7 +6,7 @@ footer {
   height: 100%;
   max-width: 1145px;
   place-items: center;
-  margin: 0 auto;
+  margin: 0 20px;
   padding-top: 45px;
   padding-bottom: 45px;
   align-items: start;
@@ -42,10 +42,10 @@ address {
   width: 100%;
 }
 
-@media (max-width: 768px){
- footer {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  margin-left: 10px;
-}
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+  }
 }

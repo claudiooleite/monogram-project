@@ -22,7 +22,7 @@ const Nav = ({ onOpen, productsRef }) => {
   };
 
   return (
-    <div className="nav-position-fixed">
+    <div className="nav-div">
       <nav className="nav-parent">
         <Link className="nav-logo" to="/">
           <img src={Image1} alt="Music Store Logo" />
@@ -36,6 +36,7 @@ const Nav = ({ onOpen, productsRef }) => {
               aria-label="Basket"
               onClick={onOpen}
               className="basket-button"
+              fontSize='25px'
             />
             {basket.length > 0 && (
               <Badge
@@ -48,7 +49,7 @@ const Nav = ({ onOpen, productsRef }) => {
             )}
           </li>
         </ul>
-        <HamburgerMenu handleShopClick={handleShopClick}/>
+        <HamburgerMenu fontSize='25px' handleShopClick={handleShopClick} />
       </nav>
     </div>
   );
